@@ -16,32 +16,51 @@ opt_in_rules:
   - closure_end_indentation
   - closure_spacing
   - collection_alignment
+  - contains_over_filter_count
+  - contains_over_filter_is_empty
   - contains_over_first_not_nil
+  - contains_over_range_nil_comparison
   - convenience_type
   - discouraged_direct_init
   - discouraged_optional_boolean
   - discouraged_optional_collection
+  - empty_collection_literal
   - empty_count
   - empty_string
   - empty_xctest_method
+  - enum_case_associated_values_count
   - explicit_enum_raw_value
   - explicit_init
+  - fallthrough
   - fatal_error_message
+  - file_name
+  - file_name_no_space
   - first_where
+  - flatmap_over_map_reduce
   - force_unwrapping
   - identical_operands
+  - implicit_return
   - implicitly_unwrapped_optional
   - joined_default_parameter
   - last_where
+  - legacy_multiple
+  - legacy_random
   - literal_expression_end_indentation
   - lower_acl_than_parent
-  # - missing_docs
+  - missing_docs
   - modifier_order
+  - multiline_arguments
   - multiline_function_chains
+  - multiline_literal_brackets
   - multiline_parameters
+  - number_separator
   - no_extension_access_modifier
   - operator_usage_whitespace
+  - optional_enum_case_matching
   - overridden_super_call
+  - override_in_extension
+  - pattern_matching_keywords
+  - prefer_self_type_over_type_of_self
   - private_action
   - private_outlet
   - prohibited_super_call
@@ -57,7 +76,11 @@ opt_in_rules:
   - unavailable_function
   - unneeded_parentheses_in_closure_argument
   - untyped_error_in_catch
+  - unused_declaration
   - unused_import
   - unused_private_declaration
+  - vertical_parameter_alignment_on_call
+  - vertical_whitespace_between_cases
+  - vertical_whitespace_closing_braces
   - xct_specific_matcher
   - yoda_condition
