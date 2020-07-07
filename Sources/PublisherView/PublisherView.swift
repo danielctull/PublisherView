@@ -82,25 +82,10 @@ extension PublisherView {
 extension PublisherView: View {
 
     public var body: some View {
-        ZStack {
-            initialView
-            outputView
-            failureView
+        switch loader.display {
+        case let .initial(initial): initial
+        case let .output(output): output
+        case let .failure(failure): failure
         }
-    }
-
-    private var initialView: InitialView? {
-        guard case .initial(let view) = loader.display else { return nil }
-        return view
-    }
-
-    private var outputView: OutputView? {
-        guard case .output(let view) = loader.display else { return nil }
-        return view
-    }
-
-    private var failureView: FailureView? {
-        guard case .failure(let view) = loader.display else { return nil }
-        return view
     }
 }
