@@ -1,14 +1,14 @@
-// swift-tools-version:5.1
+// swift-tools-version:5.3
 
 import PackageDescription
 
 let package = Package(
     name: "PublisherView",
     platforms: [
-        .iOS(.v13),
-        .macOS(.v10_15),
-        .tvOS(.v13),
-        .watchOS(.v6)
+        .iOS(.v14),
+        .macOS(.v10_16),
+        .tvOS(.v14),
+        .watchOS(.v7)
     ],
     products: [
         .library(name: "PublisherView", targets: ["PublisherView"]),
