@@ -17,7 +17,7 @@ public struct PublisherView<Publisher, InitialView, OutputView, FailureView>
     public typealias Output = Publisher.Output
     public typealias Failure = Publisher.Failure
 
-    @ObservedObject private var loader: Loader
+    @StateObject private var loader: Loader
 
     /// Create a publisher view, showing nothing initially.
     ///
@@ -28,14 +28,14 @@ public struct PublisherView<Publisher, InitialView, OutputView, FailureView>
     ///   - output: Function to create the view for a given output value.
     ///   - failure: Function to create the view for the given failure.
     public init(publisher: Publisher,
-                initial: () -> InitialView,
+                initial: @escaping () -> InitialView,
                 output: @escaping (Output) -> OutputView,
                 failure: @escaping (Failure) -> FailureView) {
 
-        loader = Loader(publisher: publisher,
-                        initial: initial,
-                        output: output,
-                        failure: failure)
+        _loader = StateObject(wrappedValue: Loader(publisher: publisher,
+                                                   initial: initial,
+                                                   output: output,
+                                                   failure: failure))
     }
 }
 
